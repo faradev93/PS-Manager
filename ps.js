@@ -69,7 +69,7 @@ function ShowProduct() {
     console.log(`\n Product List: 👌`);
     product.forEach((product, index) => {
       console.log(
-        `${index + 1}-${product.name}     >>Price:  (${product.price})`
+        `${index + 1}-${product.name}     >>Price:  (${product.price} $)`
       );
     });
   }
@@ -114,3 +114,15 @@ function RemoveProduct(input) {
   });
 }
 ShowMenu();
+
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+  print() {
+    console.log(`${this.name}& ${this.price}`);
+  }
+}
+const newProduct = new Product("hammer", 25);
+newProduct.print();
